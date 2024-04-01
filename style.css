@@ -266,7 +266,7 @@ body {
         0 0 25px white, 0 0 50px white;
 }
 
-section {
+.lk {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(359px, 1fr));
     grid-gap: 40px;
