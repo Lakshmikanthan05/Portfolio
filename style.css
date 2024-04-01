@@ -1,0 +1,599 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+
+}
+
+body {
+    color: black;
+    background: black;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a:hover {
+    color: brown;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+}
+
+.home img {
+    width: 55%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+
+.subhome {
+    margin-left: 50px;
+    margin-right: auto;
+    margin-top: 15%;
+
+}
+
+.subhome h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .5s;
+}
+
+.subhome h3 span {
+    color: brown;
+}
+
+.subhome h1 {
+    font-size: 53px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .5s;
+}
+
+.subhome p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .5s;
+}
+
+.homepages a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.homepages a:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 20px white;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: white;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.3s;
+    box-shadow: 0 0 10px white;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px white,
+        0 0 25px white, 0 0 50px white;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px;
+    gap: 0.5rem;
+    padding-top: 40px;
+
+}
+
+.about-img img {
+    width: 300px;
+    margin: 30px;
+    box-shadow: 0 0 5px white, 0 0 25px white, 0 0 50px white;
+    border-radius: 20px;
+}
+
+.about-text {
+    color: aliceblue;
+    max-width: 50%;
+
+}
+
+.about-text h2 {
+    font-size: 60px;
+}
+
+.about-text h2 span {
+    color: brown;
+}
+
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: aliceblue;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+
+}
+
+#services {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+    background-color: black;
+}
+
+.sub-title {
+    color: aliceblue;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 50px;
+}
+
+.sub-title span {
+    color: brown;
+}
+
+
+.service-list {
+    display: flex;
+    margin: 30px;
+
+
+}
+
+.service-list div {
+    background-color: transparent;
+    padding: 40px;
+    margin: 20px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px white;
+}
+
+.service-list div:hover {
+    box-shadow: 0 0 5px white,
+        0 0 25px white, 0 0 50px white;
+    transform: translateY(-8px);
+}
+
+.service-list i {
+    font-size: 30px;
+
+}
+
+.service-list a {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: white;
+    border-radius: 40px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 10px white;
+}
+
+.service-list a:hover {
+    box-shadow: 0 0 5px white,
+        0 0 25px white, 0 0 50px white;
+}
+
+section {
+    display: flex;
+
+}
+
+.container1 {
+    color: aliceblue;
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-bottom: 100px;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar {
+    font-size: 23px;
+
+}
+
+.Technical .bar {
+    margin-top: 40px 0;
+
+}
+
+.Technical .bar:first-child {
+    margin-top: 0;
+}
+
+.Technical.bar:last-child {
+    margin-bottom: 0;
+}
+
+.Technical .bar .info {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.Technical .bar .info span {
+    margin-left: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+
+}
+
+.Technical .bar .Progress {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: grey;
+    transform: scaleX(0);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform-origin: left;
+    margin-bottom: 30px;
+}
+
+
+.Technical .bar .Progress span {
+    height: 100%;
+    background-color: aliceblue;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform-origin: left;
+    box-shadow: 0 0 5px white;
+}
+
+.Progress.html span {
+    width: 90%;
+}
+
+.Progress.Javascript span {
+    width: 75%;
+}
+
+.Progress.React span {
+    width: 70%;
+}
+
+.Progress.C span {
+    width: 80%;
+}
+
+.Progress.Java span {
+    width: 85%;
+}
+
+.Progress.Python span {
+    width: 70%;
+}
+
+.Progress span:hover {
+    box-shadow: 0 0 5px white, 0 0 10px white;
+}
+
+.Progress span::after {
+    position: absolute;
+    padding: 1px 8px;
+    color: aliceblue;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.Progress.html span::after {
+    content: "90%";
+}
+
+.Progress.Javascript span::after {
+    content: "75%";
+}
+
+.Progress.React span::after {
+    content: "70%";
+}
+
+.Progress.C span::after {
+    content: "80%";
+}
+
+.Progress.Java span::after {
+    content: "85%";
+}
+
+.Progress.Python span::after {
+    content: "70%";
+}
+
+.Progress span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: black;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.radical {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.radical .radial {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radical .radial svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radical .radial .progress {
+    stroke-width: 8;
+    stroke: rgb(124, 124, 124);
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+
+}
+
+.path {
+    stroke-width: 14;
+    stroke: white;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+
+}
+
+.path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+
+.path-2 {
+    animation: animate-path2 1s 1s linear forwards;
+}
+
+.path-3 {
+    animation: animate-path3 1s 1s linear forwards;
+}
+
+.path-4 {
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 70;
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 125;
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 175;
+    }
+}
+
+.radial .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: -1;
+    }
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatex(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
