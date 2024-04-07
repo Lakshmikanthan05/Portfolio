@@ -71,6 +71,7 @@ body {
     animation: slideTop 1s ease forwards;
 }
 
+
 .subhome {
     margin-left: 50px;
     margin-top: 15%;
@@ -168,7 +169,7 @@ body {
 
 .about-text {
     color: aliceblue;
-   
+
 
 }
 
@@ -535,6 +536,96 @@ section {
     opacity: 0;
 }
 
+.contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(359px, 1fr));
+    grid-gap: 20px;
+
+}
+.contact1{
+    color: aliceblue;
+    margin-left:auto;
+    margin-right: auto;
+}
+.contact1 h1{
+    color: aliceblue;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 50px;
+}
+.contact1 h1 span{
+    color: brown;
+}
+.contact1 .mailid{
+    margin: 10px;
+}
+.contact1  i{
+    font-size: 20px;
+}
+.contact1 .phone{
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.contact2{
+margin-right: 20%;
+}
+.contact2 .form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(359px, 1fr));
+    grid-gap: 40px;
+    margin-top: 60px;
+}
+.contact2 .form input{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.contact2 .form input:hover{
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
+}
+.contact2 .form textarea{
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+.contact2 .form textarea:hover{
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
+}
+
+.contact2 .form .submit{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+}
+.contact2 .form .submit:hover{
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
+}
+.contact1 a{
+    text-decoration: none;
+    background-color: aliceblue;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;
+}
+.contact1 a:hover{
+    box-shadow: 0 0 5px white,
+        0 0 10px white,
+        0 0 20px white;
+}
+#msg{
+    width: 50%;
+    margin-bottom: 30px;
+    font-weight: 50px;
+    color: aliceblue;
+    text-shadow: 0 0 10px white;
+}
 @keyframes animate-bar {
     100% {
         stroke-dashoffset: -1;
@@ -598,5 +689,28 @@ section {
     100% {
         transform: translateX(0px);
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .home img{
+        width: 70%;
+    }
+    .about-img img{
+        margin-left: 60px;
+    }
+    .about-text{
+        margin-left: 40px ;
+        width: 450px;
+    }
+    .sub-title{
+        margin-left:70px;
+    }
+    .lks{
+        width: 450px;
+    }
+    .contact2{
+        margin-left: 50px;
+        width: 500px;
     }
 }

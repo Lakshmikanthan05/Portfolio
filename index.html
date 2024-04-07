@@ -17,13 +17,13 @@
 
         <nav class="navbar">
             <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Skill</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="#about">About</a>
+            <a href="#project">Projects</a>
+            <a href="#skill">Skill</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    <section class="how">
+    <section class="how" id="how">
         <div class="home">
 
             <div class="subhome">
@@ -61,13 +61,13 @@
         </div>
     </section>
     
-    <section class="skill">
+    <section class="skill" id="project">
         <div class="services" id="services">
             <div class="container">
                 <h1 class="sub-title">My <span>Projects</span></h1>
             </div>
             <div class="service-list">
-                <div>
+                <div class="lks">
                     <i class='bx bx-music'></i>
                     <h2>Music App</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum id vero dolorem maiores expedita
@@ -75,7 +75,7 @@
                     <a href="https://github.com/Lakshmikanthan05/Music_Player" target="_blank"><i
                             class='bx bxl-github'></i> Github Link</a>
                 </div>
-                <div>
+                <div class="lks">
                     <i class='bx bxs-bowl-hot'></i>
                     <h2>Food Order App</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum id vero dolorem maiores expedita
@@ -84,7 +84,7 @@
                     <a href="https://github.com/Lakshmikanthan05/Hotel_booking_app" target="_blank"><i
                             class='bx bxl-github'></i>Github Link</a>
                 </div>
-                <div>
+                <div class="lks">
                     <i class='bx bxs-camera'></i>
                     <h2>Work Monitoring And Crime Prevention</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum id vero dolorem maiores expedita
@@ -97,7 +97,7 @@
         </div>
     </section>
     <h1 class="sub-title">My <span>Skills</span></h1>
-    <section>
+    <section id="skill">
         
         
         <div class="container1" id="Skills">
@@ -174,7 +174,7 @@
                         <circle class=" path path-1" cx="100" cy="100" r="80"></circle>
                     </svg>
                     <div class="percentage">90%</div>
-                    <div class="text">Teamwork</div>
+                    <div class="text">Problem Solving</div>
                 </div>
                 <div class="radial">
                     <svg x="0px" y="0px" viewBox="0 0 200 200">
@@ -182,7 +182,7 @@
                         <circle class="path path-2" cx="100" cy="100" r="80"></circle>
                     </svg>
                     <div class="percentage">80%</div>
-                    <div class="text">Problem Solving</div>
+                    <div class="text">Teamwork</div>
                 </div>
                 <div class="radial">
                     <svg x="0px" y="0px" viewBox="0 0 200 200">
@@ -206,7 +206,44 @@
         
         
     </section>
+    <section id="contact">
+        <div class="contact1">
+            <h1>Contact <span>Me</span></h1>
+            <div class="mailid"><i class='bx bx-mail-send'></i><p>lakshmikanthan.a04@gmail.com</p></div>
+            <div class="phone"><i class='bx bxs-phone'></i><p>7418537417</p></div>
+            <a href="">Download CV</a>
+        </div>
+        <div class="contact2">
+            <form class="form" name="submit-to-google-sheet">
+                <input class="name" type="text" name="Name" placeholder="Your Name">
+                <input class="email" type="email" name="Email" placeholder="Your Email">
+                <textarea name="Message"  rows="10" placeholder="Your Message"></textarea>
+                <button class="submit" type="submit">Submit</button>
+                <span id="msg"></span>
+            </form>
+            
+        </div>
+
+    </section>
+
     <script src="main.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwBlXOQXHPisFmg8I8Rz8szBD1V4SIQoBg4ixr8Vulk49pn7fUPj3dHm1iF2NJwg6-N/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML ="Message Send Successfully"
+                    setTimeout(function(){
+                        msg.innerHTML=""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 
 </html>
