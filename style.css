@@ -609,6 +609,7 @@ margin-right: 20%;
 .contact1 a{
     text-decoration: none;
     background-color: aliceblue;
+    color: black;
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
@@ -695,6 +696,7 @@ margin-right: 20%;
 @media screen and (max-width: 600px){
     .home img{
         width: 70%;
+        margin-left: 10px;
     }
     .about-img img{
         margin-left: 60px;
